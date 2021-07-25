@@ -1,10 +1,11 @@
-import React from "react";
+// import React from "react";
 // import ReactDOM from "react-dom";
 // import "./index.css";
 // import App from "./App";
 // import reportWebVitals from "./reportWebVitals";
 
-import "./lesson-1/componentsAndCollection.js";
+// import "./lesson-1/componentsAndCollection.js";
+import "./lesson-2/style.js";
 
 // ReactDOM.render(
 //   <React.StrictMode>

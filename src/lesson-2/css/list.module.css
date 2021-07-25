@@ -1,0 +1,29 @@
+@value font-stack from './variables.module.css';
+
+.list {
+  list-style: none;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  color: blue;
+}
+
+.button {
+  font-size: 18px;
+  font-family: font-stack;
+
+  padding: 5px;
+
+  border-radius: 5px;
+  color: white;
+}
+
+.disabled {
+  background-color: gray;
+  color: white;
+}
+
+.active {
+  background-color: green;
+  color: white;
+}
