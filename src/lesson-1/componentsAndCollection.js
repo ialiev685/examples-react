@@ -34,22 +34,23 @@ const container = React.createElement(
 
 // ReactDOM.render(container, document.getElementById("root"));
 
-//-------Компоненты-------
+//======Компоненты=======
+
 const pictureUrl = 'https://images.pexels.com/photos/8704785/pexels-photo-8704785.jpeg?cs=srgb&dl=pexels-daria-ponomareva-8704785.jpg&fm=jpg'
 
-const App =()=>(
+const App = () => (
   <div>
-    <Product name ='На отдых в Турцию' text = 'Лететь всего 3.5 часа. Теплое море' imgUrl={pictureUrl}/>
+    <Product name='На отдых в Турцию' text='Лететь всего 3.5 часа. Теплое море' imgUrl={pictureUrl} />
   </div>
 );
 
 
-const Product = props =>(
-<div>
-  <img src={props.imgUrl} width ='400'/>
-  <h2>{props.name}</h2>
-  <p>{props.text}</p>
-</div>
+const Product = props => (
+  <div>
+    <img src={props.imgUrl} width='400' />
+    <h2>{props.name}</h2>
+    <p>{props.text}</p>
+  </div>
 );
 
 
@@ -61,27 +62,27 @@ const Product = props =>(
 //-------props.children-------
 
 
-const Profile =({name, email})=>(
+const Profile = ({ name, email }) => (
   <div>
-      <p>name:{name}</p>
-      <p>email:{email}</p>
+    <p>name:{name}</p>
+    <p>email:{email}</p>
   </div>
 );
 
 
 
-const Panel =({title, children})=>(
+const Panel = ({ title, children }) => (
   <div>
     <h2>{title}</h2>
-      {children}
+    {children}
   </div>
 );
 
-const App2=()=>(
+const App2 = () => (
   <>
-  <Panel title='Пользователь:'>
-    <Profile name='Ilfat' email='ialiev685@gmail.com'/>
-  </Panel>
+    <Panel title='Пользователь:'>
+      <Profile name='Ilfat' email='ialiev685@gmail.com' />
+    </Panel>
   </>
 );
 
@@ -94,12 +95,12 @@ const App2=()=>(
 
 
 
-const Item = ({imgUrl, name, text }) =>(
-<div>
-  <img src={imgUrl} width ='400'/>
-  <h2>{name}</h2>
-  <p>{text}</p>
-</div>
+const Item = ({ imgUrl, name, text }) => (
+  <div>
+    <img src={imgUrl} width='400' />
+    <h2>{name}</h2>
+    <p>{text}</p>
+  </div>
 );
 
 
@@ -108,14 +109,14 @@ Item.defaultProps = {
 };
 
 
-const App4 =()=>(
+const App4 = () => (
   <div>
-    <Product name ='На отдых в Турцию' text = 'Лететь всего 3.5 часа. Теплое море' />
+    <Item name='На отдых в Турцию' text='Лететь всего 3.5 часа. Теплое море' />
   </div>
 );
 
 
-ReactDOM.render(<App4/>, document.getElementById("root"))
+// ReactDOM.render(<App4/>, document.getElementById("root"))
 
 
 //-------propTypes-------
@@ -127,3 +128,67 @@ ReactDOM.render(<App4/>, document.getElementById("root"))
 //   name: PropTypes.string.isRequired,
 //   price: PropTypes.number.isRequired,
 // };
+
+
+//-------Рендер по условию-------
+
+const Box = ({ count, item, image }) => (
+  <div>
+    <h1>Идет подсчет</h1>
+
+    {count > 4 && (<p>равно {count}</p>)}
+
+    {item === 'конфет' ? (<p>{item}</p>) : (<p>шоколад</p>)}
+
+    <div>
+      {image === 'true'
+        ? (<img width='400' src='https://images.pexels.com/photos/1906435/pexels-photo-1906435.jpeg?cs=srgb&dl=pexels-ylanite-koppens-1906435.jpg&fm=jpg' />)
+        : (<img width='400' src='https://images.pexels.com/photos/2833348/pexels-photo-2833348.jpeg?cs=srgb&dl=pexels-karley-saagi-2833348.jpg&fm=jpg' />)
+      }
+    </div>
+  </div>
+);
+
+const App5 = () => (
+  <>
+    <Box item='конфет' count='5' image='true' />
+  </>
+);
+
+// ReactDOM.render(<App5 />, document.getElementById("root"))
+
+//=======Коллекции=======
+
+//-------Ключи-------
+
+const arrLang = [
+  { id: 1, name: 'JavaScript' },
+  { id: 2, name: 'React' },
+  { id: 3, name: 'HTML' },
+  { id: 4, name: 'CSS' },
+]
+
+
+
+const BookLang = ({ book }) => (
+  <div>
+    <h1>Языки програмирования</h1>
+    <ul>
+      {book.map(el => (
+        <li key={el.id}>{el.name}</li>
+      ))}
+    </ul>
+  </div>
+
+);
+
+const App6 = () => (
+  <>
+    <BookLang book={arrLang} />
+  </>
+)
+
+ReactDOM.render(<App6 />, document.getElementById("root"))
+
+
+
