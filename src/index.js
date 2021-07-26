@@ -5,6 +5,7 @@ import React from "react";
 // import reportWebVitals from "./reportWebVitals";
 
 import "./lesson-1/componentsAndCollection.js";
+//СЛЕД
 
 // ReactDOM.render(
 //   <React.StrictMode>
