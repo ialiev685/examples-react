@@ -1,17 +1,17 @@
-import React, { Fragment } from "react";
-import ReactDOM from "react-dom";
+import React, { Fragment } from 'react';
+import ReactDOM from 'react-dom';
 
 // react формат создания эелемента
 const link = React.createElement(
-  "a",
-  { href: "https://yandex.ru", target: "_blank", rel: "noreferrer noopener" },
-  "ссылка на yandex"
+  'a',
+  { href: 'https://yandex.ru', target: '_blank', rel: 'noreferrer noopener' },
+  'ссылка на yandex',
 );
-const title = React.createElement("h2", null, "Нажмите на ссылку");
+const title = React.createElement('h2', null, 'Нажмите на ссылку');
 
 //  jsx формат создания эелемента
 const imageUrl =
-  "https://images.pexels.com/photos/7240389/pexels-photo-7240389.jpeg?cs=srgb&dl=pexels-john-lee-7240389.jpg&fm=jpg";
+  'https://images.pexels.com/photos/7240389/pexels-photo-7240389.jpeg?cs=srgb&dl=pexels-john-lee-7240389.jpg&fm=jpg';
 const image = <img src={imageUrl} width="400" />;
 
 // образрный фрагмент, при рендере раствориться
@@ -24,12 +24,12 @@ const nextPost = (
 );
 
 const container = React.createElement(
-  "div",
+  'div',
   null,
   title,
   image,
   link,
-  nextPost
+  nextPost,
 );
 
 // ReactDOM.render(container, document.getElementById("root"));
@@ -37,7 +37,7 @@ const container = React.createElement(
 //======Компоненты=======
 
 const pictureUrl =
-  "https://images.pexels.com/photos/8704785/pexels-photo-8704785.jpeg?cs=srgb&dl=pexels-daria-ponomareva-8704785.jpg&fm=jpg";
+  'https://images.pexels.com/photos/8704785/pexels-photo-8704785.jpeg?cs=srgb&dl=pexels-daria-ponomareva-8704785.jpg&fm=jpg';
 
 const App = () => (
   <div>
@@ -49,7 +49,7 @@ const App = () => (
   </div>
 );
 
-const Product = (props) => (
+const Product = props => (
   <div>
     <img src={props.imgUrl} width="400" />
     <h2>{props.name}</h2>
@@ -97,7 +97,7 @@ const Item = ({ imgUrl, name, text }) => (
 
 Item.defaultProps = {
   imgUrl:
-    "https://images.pexels.com/photos/8829906/pexels-photo-8829906.jpeg?cs=srgb&dl=pexels-kira-schwarz-8829906.jpg&fm=jpg",
+    'https://images.pexels.com/photos/8829906/pexels-photo-8829906.jpeg?cs=srgb&dl=pexels-kira-schwarz-8829906.jpg&fm=jpg',
 };
 
 const App4 = () => (
@@ -126,10 +126,10 @@ const Box = ({ count, item, image }) => (
 
     {count > 4 && <p>равно {count}</p>}
 
-    {item === "конфет" ? <p>{item}</p> : <p>шоколад</p>}
+    {item === 'конфет' ? <p>{item}</p> : <p>шоколад</p>}
 
     <div>
-      {image === "true" ? (
+      {image === 'true' ? (
         <img
           width="400"
           src="https://images.pexels.com/photos/1906435/pexels-photo-1906435.jpeg?cs=srgb&dl=pexels-ylanite-koppens-1906435.jpg&fm=jpg"
@@ -157,10 +157,10 @@ const App5 = () => (
 //-------Ключи-------
 
 const arrLang = [
-  { id: 1, name: "JavaScript" },
-  { id: 2, name: "React" },
-  { id: 3, name: "HTML" },
-  { id: 4, name: "CSS" },
+  { id: 1, name: 'JavaScript' },
+  { id: 2, name: 'React' },
+  { id: 3, name: 'HTML' },
+  { id: 4, name: 'CSS' },
 ];
 
 const BookLang = ({ book }) => (
@@ -168,7 +168,7 @@ const BookLang = ({ book }) => (
     <h1>Языки програмирования</h1>
 
     <ul>
-      {book.map((el) => (
+      {book.map(el => (
         <li key={el.id}>{el.name}</li>
       ))}
     </ul>
@@ -181,4 +181,4 @@ const App6 = () => (
   </>
 );
 
-ReactDOM.render(<App6 />, document.getElementById("root"));
+// ReactDOM.render(<App6 />, document.getElementById("root"));
