@@ -12,55 +12,58 @@ class Counter extends Component {
     initialValue: 0,
   };
 
-//   constructor(props){
-//     super(props);
-//     this.state={ value: this.props.initialValue}
-//   this.onIncrement=this.onIncrement.bind(this)
-//   this.onDecrement=this.onDecrement.bind(this)
-// }
-
-//   onIncrement(event) {
-//     console.log(this.props);
-//   }
-//   onDecrement(event) {
-//     console.log(this.props);
+  //   constructor(props){
+  //     super(props);
+  //     this.state={ value: this.props.initialValue}
+  //   this.onIncrement=this.onIncrement.bind(this)
+  //   this.onDecrement=this.onDecrement.bind(this)
   // }
 
-  state={ 
-    value: this.props.initialValue
-  }
+  //   onIncrement(event) {
+  //     console.log(this.props);
+  //   }
+  //   onDecrement(event) {
+  //     console.log(this.props);
+  // }
 
-  
+  state = {
+    value: this.props.initialValue,
+  };
 
-onIncrement=event=>{
-  console.log(this.props);
-let num = this.state.value+1
+  onIncrement = event => {
+    console.log(this.props);
 
-  this.setState({value: num})
-}
+    this.setState((state, props) => ({ value: state.value + props.step }));
+  };
 
-onDecrement=event=>{
-  console.log(this.props);
-  let num = this.state.value-1;
+  onDecrement = event => {
+    console.log(this.props);
 
-  this.setState({value: num})
-}
+    this.setState((state, props) => ({ value: state.value - props.step }));
+  };
 
   render() {
     const { step } = this.props;
 
     return (
       <div>
-        <span>{this.state.value}</span>
         <button type="button" onClick={this.onIncrement}>
           Increment by {step}
         </button>
+        <span>{this.state.value}</span>
         <button type="button" onClick={this.onDecrement}>
           Decrement by {step}
         </button>
+        <DoubleButton label="max" changeValue={this.onIncrement} />
       </div>
     );
   }
 }
+
+const DoubleButton = ({ label, changeValue }) => (
+  <button type="button" onClick={changeValue}>
+    {label}
+  </button>
+);
 
 export { Button, Counter };
