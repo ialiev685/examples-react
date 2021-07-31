@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Ольга Репина",
+    "developer": "Frontend Developer",
+    "socials": {
+      "instagram": "url",
+      "facebook": "url",
+      "linkdin": "url",
+      "github": "url"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Федор Лапшов",
+    "developer": "Frontend Developer",
+    "socials": {
+      "instagram": "url",
+      "facebook": "url",
+      "linkdin": "url",
+      "github": "url"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Артем Бутров",
+    "developer": "Frontend Developer",
+    "socials": {
+      "instagram": "url",
+      "facebook": "url",
+      "linkdin": "url",
+      "github": "url"
+    }
+  }
+]

@@ -3,6 +3,9 @@
 import { Button, Counter } from './lessons/lesson-3/eventAndStatus.js';
 import Form from './lessons/lesson-4/Forms.jsx';
 
+import dataOurTeam from './data/ourTeam.json';
+import OurTeamlList from './OurTemaList/OurTeamList.jsx';
+
 const App = () => {
   return (
     <>
@@ -11,6 +14,7 @@ const App = () => {
       <Counter step={5} initialValue={10} />
       <p>lesson 4</p>
       <Form />
+      <OurTeamlList data={dataOurTeam} />;
     </>
   );
 };
