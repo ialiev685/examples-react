@@ -1,0 +1,42 @@
+.counter {
+  border: 1px solid gray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+
+  width: 300px;
+  padding: 10px;
+}
+
+.counter__controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.counter__value {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+
+  margin: 0;
+
+  text-align: center;
+}
+
+.counter__button {
+  padding: 10px;
+
+  outline: none;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+.counter__button--increment {
+  background-color: coral;
+}
+
+.counter__button--decrement {
+  background-color: cornflowerblue;
+}
