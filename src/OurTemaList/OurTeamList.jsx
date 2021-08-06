@@ -1,7 +1,6 @@
 import OurTeam from '../OurTeam/OurTeam';
 
 const OurTeamlList = ({ data }) => {
-  console.log(data);
   return (
     <ul>
       {data.map(el => {

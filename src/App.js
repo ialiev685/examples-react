@@ -9,6 +9,9 @@ import OurTeamlList from './OurTemaList/OurTeamList.jsx';
 import CounterTwo from './CounterTwo';
 import DropMenu from './DropMenu';
 
+import dataColorPicker from './dataColorPicker/ColorPicker.json';
+import ColorPicker from './ColorPicker';
+
 const App = () => {
   return (
     <>
@@ -23,6 +26,8 @@ const App = () => {
       <CounterTwo initialValue={5} />
       <p>DropMenu</p>
       <DropMenu />
+      <p>ColorPicker</p>
+      <ColorPicker data={dataColorPicker} />
     </>
   );
 };
