@@ -9,22 +9,25 @@ const OurTeam = ({ name, developer, socials }) => {
       <p className="team__pstn">{developer}</p>
       <ul className="team__social-icons">
         <li className="social-icon">
-          <a className="social-icon-link" href="#">
+          <a className="social-icon-link" href="https://www.instagram.com/">
             {socials.instagram}
           </a>
         </li>
         <li className="social-icon">
-          <a className="social-icon-link" href="#">
+          <a className="social-icon-link" href="https://ru-ru.facebook.com/">
             {socials.facebook}
           </a>
         </li>
         <li className="social-icon">
-          <a className="social-icon-link" href="#">
+          <a
+            className="social-icon-link"
+            href="https://ru-ru.facebook.com/LinkedIn/"
+          >
             {socials.linkdin}
           </a>
         </li>
         <li className="social-icon">
-          <a className="social-icon-link" href="#">
+          <a className="social-icon-link" href="https://github.com/">
             {socials.github}
           </a>
         </li>
